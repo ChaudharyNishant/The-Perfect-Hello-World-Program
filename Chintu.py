@@ -6,13 +6,12 @@ from time import sleep
 # A very beautiful function which will keep printing a string with a random character, until the expected character
 # is drawn
 def print_string(current_string, expected_character):
-    some_random_character = rand(0, 127)
     while True:
+        some_random_character = rand(0, 127)
         print("\r" + current_string + chr(some_random_character), end="")
-        sleep(0.5)  # Comment this line to see the result instantly
+        sleep(0.1)  # Comment this line to see the result instantly
         if chr(some_random_character) == expected_character:
             break
-        some_random_character = rand(0, 127)
 
 
 my_string = "Hello World"
